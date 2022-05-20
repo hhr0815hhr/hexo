@@ -34,4 +34,16 @@ class IndexController extends AbstractController
             'message' => "hey {$user}.",
         ];
     }
+
+    public function test2()
+    {
+        $user = $this->request->input('user', 'Hyperf');
+        $method = $this->request->getMethod();
+
+        return [
+            'method' => $method,
+            'message' => "hey2 {$user}.",
+        ];
+    }
+
 }
